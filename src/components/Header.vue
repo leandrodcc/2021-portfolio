@@ -114,6 +114,7 @@
       <nav
         class="header__menu-panel"
         :class="{ 'header__menu-panel--hidden': isMenuOpen }"
+        :aria-expanded="isMenuOpen ? 'true' : 'false'"
       >
         <ul>
           <li class="header__menu-item">
@@ -181,8 +182,6 @@ export default {
   left: 0;
   background-color: #fff;
   transition-property: transform;
-
-  @include transition-md;
 }
 
 .header__menu-panel--hidden {

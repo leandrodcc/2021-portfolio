@@ -12,6 +12,89 @@ p {
 }
 
 // Paragraph styles
-p, .p-augmented, .p-small--normal, .p-small--caps {
-    font-family: $primary-font;
+p,
+.p--augmented,
+.p--small--normal,
+.p--small--caps {
+  color: $black;
+  font-family: $primary-font;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.p--augmented {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.p--small--normal,
+.p--small--caps {
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.p--small--caps {
+  text-transform: uppercase;
+}
+
+p,
+.p--augmented {
+  @media screen and (min-width: 60rem) {
+    font-size: 1.25rem;
+  }
+}
+
+// Parnaso headings
+h1,
+.h1,
+.h1--mega,
+h2,
+.h2 {
+  color: $black;
+  font-family: $title-font;
+  line-height: 1;
+}
+
+h1,
+.h1 {
+  font-size: 4rem;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1.875rem;
+    line-height: 1.1;
+  }
+}
+
+.h1--mega {
+  font-size: 2.5rem;
+
+  @media screen and (min-width: 60rem) {
+    font-size: 6rem;
+    line-height: 1.1;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2.875rem;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1.875rem;
+    line-height: 1.1;
+  }
+}
+
+// Scto Grotesk headings
+.h1--sga,
+.h1--sga--mega,
+.h2--sga,
+.h3--sga,
+.h4--sga,
+.h5--sga,
+.h6--sga {
+  color: $black;
+  font-family: $primary-font;
 }

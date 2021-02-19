@@ -5,6 +5,7 @@
       truly.
     </p>
     <div class="footer__links">
+      <!-- FIXME: replace links below with true social media links -->
       <button class="universal-tag">Twitter</button>
       <button class="universal-tag">Instagram</button>
       <button class="universal-tag">Dribbble</button>

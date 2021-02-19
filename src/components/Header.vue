@@ -113,7 +113,7 @@
       </button>
       <transition name="menu-slide">
         <nav
-          v-if="isMenuOpen"
+          v-show="isMenuOpen"
           class="header__menu-panel"
           :aria-expanded="isMenuOpen ? 'true' : 'false'"
         >
@@ -121,12 +121,14 @@
             <ul>
               <li class="header__menu-item">
                 <p aria-hidden="true">I. Browse my projects</p>
+                <!-- FIXME: replace link below with a router link -->
                 <a class="h1--mega">Home</a>
               </li>
               <li class="header__menu-item">
                 <p aria-hidden="true">II. Get to know me, talk to me</p>
+                <!-- FIXME: replace link below with a router link -->
                 <a class="h1--mega"
-                  >About<span class="h1--sga--mega">/</span>Contacts</a
+                  >About <span class="h1--sga--mega">/</span> Contacts</a
                 >
               </li>
             </ul>
@@ -180,12 +182,16 @@ export default {
 
 .header__menu-panel {
   width: 100vw;
-  padding: 6rem 0;
-  opacity: 1;
+  padding: 6rem 0 3rem 0;
+  background-color: #fff;
+  border-bottom: solid 0.5px $black;
   position: absolute;
   top: 0%;
   left: 0;
-  background-color: #fff;
+
+  @media screen and (min-width: 60rem) {
+    padding: 6rem 0;
+  }
 }
 
 .menu-slide-enter-active,
@@ -203,6 +209,13 @@ export default {
 
   &:first-child {
     margin-bottom: 1rem;
+  }
+
+  p {
+    @media screen and (max-width: 48rem) {
+      margin-bottom: 0.25rem;
+      font-size: 0.75rem;
+    }
   }
 }
 </style>

@@ -111,24 +111,28 @@
         </figure>
         <p class="p--small--caps">Menu</p>
       </button>
-      <nav
-        class="header__menu-panel"
-        :class="{ 'header__menu-panel--hidden': isMenuOpen }"
-        :aria-expanded="isMenuOpen ? 'true' : 'false'"
-      >
-        <ul>
-          <li class="header__menu-item">
-            <p aria-hidden="true">I. Browse my projects</p>
-            <a class="h1--mega">Home</a>
-          </li>
-          <li class="header__menu-item">
-            <p aria-hidden="true">II. Get to know me, talk to me</p>
-            <a class="h1--mega"
-              >About<span class="h1--sga--mega">/</span>Contacts</a
-            >
-          </li>
-        </ul>
-      </nav>
+      <transition name="menu-slide">
+        <nav
+          v-if="isMenuOpen"
+          class="header__menu-panel"
+          :aria-expanded="isMenuOpen ? 'true' : 'false'"
+        >
+          <div class="container">
+            <ul>
+              <li class="header__menu-item">
+                <p aria-hidden="true">I. Browse my projects</p>
+                <a class="h1--mega">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <p aria-hidden="true">II. Get to know me, talk to me</p>
+                <a class="h1--mega"
+                  >About<span class="h1--sga--mega">/</span>Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </transition>
     </div>
   </header>
 </template>
@@ -176,17 +180,22 @@ export default {
 
 .header__menu-panel {
   width: 100vw;
+  padding: 6rem 0;
+  opacity: 1;
   position: absolute;
-  top: -100%;
-  transform: translateY(-100%);
+  top: 0%;
   left: 0;
   background-color: #fff;
-  transition-property: transform;
 }
 
-.header__menu-panel--hidden {
-  top: 0;
-  transform: translateY(0%);
+.menu-slide-enter-active,
+.menu-slide-leave-active {
+  transition: transform 0.5s ease-out;
+}
+
+.menu-slide-enter,
+.menu-slide-leave-to {
+  transform: translateY(-100%);
 }
 
 .header__menu-item {

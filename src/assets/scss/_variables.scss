@@ -16,22 +16,6 @@ $primary-font: "Scto Grotesk A", "Helvetica Neue", helvetica, arial, sans-serif;
 $title-font: "Parnaso", "Scto Grotesk A", "Helvetica Neue", helvetica, arial,
   sans-serif;
 
-// Transitions
-@mixin transition-slow {
-  transition-duration: 0.7s;
-  transition-timing-function: ease-in;
-}
-
-@mixin transition-md {
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-}
-
-@mixin transition-fast {
-  transition-duration: 600ms;
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-}
-
 // Gradients
 @mixin vertical-grad {
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),

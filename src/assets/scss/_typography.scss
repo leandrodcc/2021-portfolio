@@ -11,9 +11,13 @@ p {
   font-display: auto;
 }
 
-// Body new reset
+// Typographic new resets
 body {
   font-family: $primary-font;
+}
+
+a {
+  cursor: pointer;
 }
 
 // Paragraph styles

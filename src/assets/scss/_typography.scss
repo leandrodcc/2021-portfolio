@@ -89,12 +89,43 @@ h2,
 
 // Scto Grotesk headings
 .h1--sga,
-.h1--sga--mega,
-.h2--sga,
-.h3--sga,
-.h4--sga,
-.h5--sga,
-.h6--sga {
+.h1--sga--mega {
   color: $black;
   font-family: $primary-font;
+  line-height: 1.1;
+}
+
+.h1--sga {
+  font-size: 2.5rem;
+
+  @media screen and (min-width: 60rem) {
+    font-size: 4rem;
+  }
+}
+
+.h1--sga--mega {
+  font-size: 2.5rem;
+
+  @media screen and (min-width: 60rem) {
+    font-size: 6rem;
+  }
+}
+
+// Code typography
+pre p,
+code p {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #fff;
+}
+
+// Blockquote typography
+blockquote h2 {
+  font-family: $title-font;
+  font-size: 1.875rem;
+  line-height: 1.1;
+
+  @media screen and (min-width: 60rem) {
+    font-size: 3.25rem;
+  }
 }

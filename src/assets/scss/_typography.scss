@@ -1,0 +1,17 @@
+body,
+form,
+fieldset,
+label,
+button,
+label,
+li,
+p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-display: auto;
+}
+
+// Paragraph styles
+p, .p-augmented, .p-small--normal, .p-small--caps {
+    font-family: $primary-font;
+}

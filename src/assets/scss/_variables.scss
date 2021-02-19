@@ -11,6 +11,10 @@ $purple-100: #AB92E1;
 $purple-200: #BF9BDE;
 $purple-300: #C0AEE7;
 
+// Fonts
+$primary-font: 'Scto Grotesk A', 'Helvetica Neue', helvetica, arial, sans-serif;
+$title-font: 'Parnaso', 'Scto Grotesk A', 'Helvetica Neue', helvetica, arial, sans-serif;
+
 // Transitions
 @mixin transition-slow {
     transition-duration: 0.7s;

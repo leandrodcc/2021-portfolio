@@ -111,6 +111,7 @@
 
 <style lang="scss">
 .header {
+  width: 100%;
   position: static;
   display: flex;
   justify-content: flex-end;

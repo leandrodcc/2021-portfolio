@@ -11,13 +11,17 @@ p {
   font-display: auto;
 }
 
+// Body new reset
+body {
+  font-family: $primary-font;
+}
+
 // Paragraph styles
 p,
 .p--augmented,
 .p--small--normal,
 .p--small--caps {
   color: $black;
-  font-family: $primary-font;
   line-height: 1.5;
 }
 

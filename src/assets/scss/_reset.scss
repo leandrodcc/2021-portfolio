@@ -129,6 +129,17 @@ q:after {
   content: none;
 }
 
+button {
+  cursor: pointer;
+  background: none;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  text-align: initial;
+  font: unset;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;

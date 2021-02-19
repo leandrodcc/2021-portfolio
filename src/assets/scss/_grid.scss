@@ -1,0 +1,18 @@
+@mixin container-structure {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.container {
+  @include container-structure;
+
+  @media screen and (min-width: 48rem) {
+    max-width: 55rem;
+  }
+
+  @media screen and (min-width: 75rem) {
+    max-width: 70rem;
+    padding: 0;
+  }
+}

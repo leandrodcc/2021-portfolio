@@ -19,4 +19,5 @@ export default {
 @import "@/assets/scss/_fonts.scss";
 @import "@/assets/scss/_variables.scss";
 @import "@/assets/scss/_typography.scss";
+@import "@/assets/scss/_grid.scss";
 </style>

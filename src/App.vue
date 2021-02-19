@@ -117,4 +117,5 @@ export default {
 @import "@/assets/scss/_variables.scss";
 @import "@/assets/scss/_typography.scss";
 @import "@/assets/scss/_grid.scss";
+@import "@/assets/scss/_tags.scss";
 </style>

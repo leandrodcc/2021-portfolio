@@ -1,0 +1,38 @@
+// Color palette
+$black: #282424;
+$black-muted: #393636;
+$pink: #F8A3E6;
+$pink-100: #FFB9F0;
+$pink-200: #FFC8F3;
+$pink-300: #F9DAEE;
+$pink-400: #FCECF6;
+$purple: #8A69D4;
+$purple-100: #AB92E1;
+$purple-200: #BF9BDE;
+$purple-300: #C0AEE7;
+
+// Transitions
+@mixin transition-slow {
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+@mixin transition-md {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+  
+@mixin transition-fast {
+    transition-duration: 600ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+// Gradients
+@mixin vertical-grad {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), $pink;
+}
+
+@mixin horizontal-grad {
+    background: linear-gradient(90deg, #FFFFFF 45%, rgba(255, 255, 255, 0) 100%), $pink;
+}
+  

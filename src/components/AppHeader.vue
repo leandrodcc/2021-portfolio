@@ -1,5 +1,13 @@
 <template>
-  <header class="header">
+  <header
+    class="header"
+    :class="{ 'header--with-breadcrumb': isBreadcrumbNeeded }"
+  >
+    <template v-if="isBreadcrumbNeeded">
+      <div class="header__breadcrumb">
+        <slot />
+      </div>
+    </template>
     <div class="header__menu">
       <button
         id="main-navigation"
@@ -151,6 +159,12 @@ export default {
       isMenuOpen: false
     };
   },
+  props: {
+    isBreadcrumbNeeded: {
+      type: Boolean,
+      default: false
+    }
+  },
   methods: {
     toggleMenuView() {
       this.isMenuOpen = !this.isMenuOpen;
@@ -167,6 +181,7 @@ export default {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 1rem 1rem;
 
   @media screen and (min-width: 48rem) {
@@ -175,6 +190,14 @@ export default {
     right: 0;
     padding: 2.5rem 3rem;
   }
+}
+
+.header--with-breadcrumb {
+  justify-content: space-between;
+}
+
+.header__breadcrumb {
+  padding-right: 2rem;
 }
 
 .header__menu-button {

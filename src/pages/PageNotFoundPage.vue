@@ -13,10 +13,13 @@
             there’s nothing here...you should go somewhere else.
           </p>
           <router-link
-            tag="button"
             class="universal-tag--xl"
             :to="{ name: 'Home' }"
-            ><span aria-hidden="true">&#60;</span> To Home page</router-link
+            custom
+            v-slot="{ navigate }"
+            ><button @click="navigate" @keypress.enter="navigate">
+              <span aria-hidden="true">&#60;</span> To Home page
+            </button></router-link
           >
         </div>
       </div>

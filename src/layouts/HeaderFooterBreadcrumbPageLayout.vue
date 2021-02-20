@@ -1,8 +1,18 @@
 <template>
-  <div>
-    <AppHeader />
-
-    <main class="container">
+  <div class="page-with-header-breadcrumb">
+    <AppHeader :is-breadcrumb-needed="true">
+      <router-link
+        class="universal-tag--xl"
+        :to="routerDirection"
+        custom
+        v-slot="{ navigate }"
+      >
+        <button @click="navigate" @keypress.enter="navigate">
+          <span aria-hidden="true">&#60;</span> {{ breadcrumbText }}
+        </button>
+      </router-link>
+    </AppHeader>
+    <main>
       <slot />
     </main>
     <AppFooter />
@@ -18,6 +28,22 @@ export default {
   components: {
     AppHeader,
     AppFooter
+  },
+  props: {
+    breadcrumbText: {
+      type: String,
+      required: true
+    },
+    routerDirection: {
+      type: Object,
+      required: true
+    }
   }
 };
 </script>
+
+<style lang="scss">
+.page-with-header-breadcrumb {
+  margin-top: 144px;
+}
+</style>

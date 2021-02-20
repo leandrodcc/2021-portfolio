@@ -54,6 +54,10 @@ export default {
 .page-not-found-page__container {
   @include containerStructure;
 
+  @media screen and (min-width: 48rem) {
+    max-width: 42rem;
+  }
+
   @media screen and (min-width: 75rem) {
     max-width: 52rem;
     padding: 0;
@@ -61,7 +65,10 @@ export default {
 }
 
 .page-not-found-page__content * {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 2rem;
+  }
 
   &:last-child {
     margin-bottom: 0;

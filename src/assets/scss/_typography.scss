@@ -31,12 +31,19 @@ p,
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .p--augmented {
   font-size: 1.5rem;
   line-height: 1.2;
+}
+
+p,
+.p--augmented {
+  @media screen and (max-width: 60rem) {
+    font-size: 1rem;
+  }
 }
 
 @mixin p-small {
@@ -51,13 +58,6 @@ p {
 
 .p--small--caps {
   text-transform: uppercase;
-}
-
-p,
-.p--augmented {
-  @media screen and (min-width: 60rem) {
-    font-size: 1.25rem;
-  }
 }
 
 // Parnaso headings

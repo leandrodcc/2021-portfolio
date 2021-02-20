@@ -16,7 +16,7 @@
             tag="button"
             class="universal-tag--xl"
             :to="{ name: 'Home' }"
-            >&#60; Go to Home</router-link
+            ><span aria-hidden="true">&#60;</span> To Home page</router-link
           >
         </div>
       </div>

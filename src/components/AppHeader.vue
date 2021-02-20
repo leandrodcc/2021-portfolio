@@ -2,8 +2,10 @@
   <header class="header">
     <div class="header__menu">
       <button
+        id="main-navigation"
         class="header__menu-button"
         aria-haspopup="true"
+        aria-label="menu button"
         @click="toggleMenuView"
       >
         <figure aria-hidden="true">
@@ -116,6 +118,7 @@
           v-show="isMenuOpen"
           class="header__menu-panel"
           :aria-expanded="isMenuOpen ? 'true' : 'false'"
+          aria-labelledby="main-navigation"
         >
           <div class="container">
             <ul>
@@ -127,7 +130,6 @@
               </li>
               <li class="header__menu-item">
                 <p aria-hidden="true">II. Get to know me, talk to me</p>
-                <!-- FIXME: replace link below with a router link -->
                 <router-link :to="{ name: 'AboutContacts' }" class="h1--mega"
                   >About
                   <span class="h1--sga--mega">/</span> Contacts</router-link

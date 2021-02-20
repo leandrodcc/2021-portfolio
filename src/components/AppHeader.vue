@@ -121,14 +121,16 @@
             <ul>
               <li class="header__menu-item">
                 <p aria-hidden="true">I. Browse my projects</p>
-                <!-- FIXME: replace link below with a router link -->
-                <a class="h1--mega">Home</a>
+                <router-link :to="{ name: 'home' }" class="h1--mega"
+                  >Home</router-link
+                >
               </li>
               <li class="header__menu-item">
                 <p aria-hidden="true">II. Get to know me, talk to me</p>
                 <!-- FIXME: replace link below with a router link -->
-                <a class="h1--mega"
-                  >About <span class="h1--sga--mega">/</span> Contacts</a
+                <router-link :to="{ name: 'about-contacts' }" class="h1--mega"
+                  >About
+                  <span class="h1--sga--mega">/</span> Contacts</router-link
                 >
               </li>
             </ul>
@@ -141,6 +143,7 @@
 
 <script>
 export default {
+  name: "AppHeader",
   data() {
     return {
       isMenuOpen: false
@@ -154,7 +157,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
 
 .header {

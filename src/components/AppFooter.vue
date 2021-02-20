@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  name: "AppFooter",
   data() {
     return {
       currentYear: new Date().getFullYear()
@@ -24,7 +25,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
 
 .footer {

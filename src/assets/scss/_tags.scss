@@ -5,12 +5,15 @@
   align-items: center;
   text-align: center;
   padding: 0.25rem 0.375rem;
+  border: solid 0.5px $black;
+  text-transform: uppercase;
 }
 
 .universal-tag {
   @include squareStructure;
   @include p-small;
+}
 
-  border: solid 0.5px $black;
-  text-transform: uppercase;
+.universal-tag--xl {
+  @include squareStructure;
 }

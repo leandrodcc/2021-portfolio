@@ -1,11 +1,11 @@
-@mixin container-structure {
+@mixin containerStructure {
   width: 100%;
   padding: 0 1rem;
   margin: 0 auto;
 }
 
 .container {
-  @include container-structure;
+  @include containerStructure;
 
   @media screen and (min-width: 48rem) {
     max-width: 55rem;

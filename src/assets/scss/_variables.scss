@@ -22,6 +22,11 @@ $title-font: "Parnaso", "Scto Grotesk A", "Helvetica Neue", helvetica, arial,
     $pink;
 }
 
+@mixin vertical-grad--2 {
+  background: linear-gradient(180deg, #ffffff 45%, rgba(255, 255, 255, 0) 100%),
+    $pink;
+}
+
 @mixin horizontal-grad {
   background: linear-gradient(90deg, #ffffff 45%, rgba(255, 255, 255, 0) 100%),
     $pink;

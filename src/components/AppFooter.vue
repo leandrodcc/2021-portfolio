@@ -45,6 +45,14 @@ export default {
   }
 }
 
+.footer__text {
+  padding-right: 0;
+
+  @media screen and (min-width: 48rem) {
+    padding-right: 3rem;
+  }
+}
+
 .footer__links {
   display: flex;
   flex-wrap: wrap;
@@ -58,11 +66,10 @@ export default {
 
   .universal-tag {
     margin-bottom: 0.75rem;
-    margin-right: unset;
+    margin-right: 0.5rem;
 
     @media screen and (min-width: 48rem) {
       margin-bottom: 0;
-      margin-right: 0.5rem;
     }
 
     &:last-child {

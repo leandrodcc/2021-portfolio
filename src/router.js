@@ -9,15 +9,23 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Home",
       component: () =>
         import(/* webpackChunkName: "home" */ "@/pages/HomePage.vue")
     },
     {
       path: "/about-contacts",
-      name: "about-contacts",
+      name: "AboutContacts",
       component: () =>
         import(/* webpackChunkName: "about-contacts" */ "@/pages/AboutPage.vue")
+    },
+    {
+      path: "*",
+      name: "PageNotFound",
+      component: () =>
+        import(
+          /* webpackChunkName: "404-not-found" */ "@/pages/PageNotFoundPage.vue"
+        )
     }
   ]
 });

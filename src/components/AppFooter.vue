@@ -5,11 +5,30 @@
       truly.
     </p>
     <div class="footer__links">
-      <!-- FIXME: replace links below with true social media links -->
-      <button class="universal-tag">Twitter</button>
-      <button class="universal-tag">Instagram</button>
-      <button class="universal-tag">Dribbble</button>
-      <button class="universal-tag">Github</button>
+      <a
+        class="universal-tag"
+        href="https://twitter.com/leandrodcc"
+        target="_blank"
+        >Twitter</a
+      >
+      <a
+        class="universal-tag"
+        href="https://www.instagram.com/leandrodcc/"
+        target="_blank"
+        >Instagram</a
+      >
+      <a
+        class="universal-tag"
+        href="https://github.com/leandrodcc"
+        target="_blank"
+        >Github</a
+      >
+      <a
+        class="universal-tag"
+        href="https://dribbble.com/leandrodcc"
+        target="_blank"
+        >Dribbble</a
+      >
     </div>
   </footer>
 </template>

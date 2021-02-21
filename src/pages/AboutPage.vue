@@ -49,10 +49,30 @@
               >
                 hello@leandrodcc.com
               </button>
-              <button class="universal-tag--xl">Twitter</button>
-              <button class="universal-tag--xl">Instagram</button>
-              <button class="universal-tag--xl">Dribbble</button>
-              <button class="universal-tag--xl">Github</button>
+              <a
+                class="universal-tag--xl"
+                href="https://twitter.com/leandrodcc"
+                target="_blank"
+                >Twitter</a
+              >
+              <a
+                class="universal-tag--xl"
+                href="https://www.instagram.com/leandrodcc/"
+                target="_blank"
+                >Instagram</a
+              >
+              <a
+                class="universal-tag--xl"
+                href="https://github.com/leandrodcc"
+                target="_blank"
+                >Github</a
+              >
+              <a
+                class="universal-tag--xl"
+                href="https://dribbble.com/leandrodcc"
+                target="_blank"
+                >Dribbble</a
+              >
             </div>
           </section>
         </div>

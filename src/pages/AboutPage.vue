@@ -47,7 +47,7 @@
                 class="universal-tag--xl copy-email"
                 @click="copyEmailToClipboard"
               >
-                {{ clipboardButtonText }}
+                hello@leandrodcc.com
               </button>
               <button class="universal-tag--xl">Twitter</button>
               <button class="universal-tag--xl">Instagram</button>
@@ -68,17 +68,18 @@ export default {
   name: "AboutPage",
   data() {
     return {
-      clipboardButtonText: "hello@leandrodcc.com"
+      clipboardButtonText: undefined
     };
   },
   components: {
     HeaderFooterBreadcrumbPageLayout
   },
   methods: {
-    async copyEmailToClipboard() {
+    async copyEmailToClipboard(event) {
       if (!navigator.clipboard) {
         return;
       }
+      this.clipboardButtonText = event.target.innerText;
       try {
         await navigator.clipboard.writeText(this.clipboardButtonText);
         alert("Copied e-mail to clipboard!");

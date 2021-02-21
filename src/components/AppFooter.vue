@@ -36,6 +36,7 @@ export default {
   text-align: center;
   border-top: solid 0.5px $black;
   padding: 2rem 1rem;
+  background: white;
 
   @media screen and (min-width: 48rem) {
     flex-direction: row;
@@ -57,7 +58,11 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-  justify-content: space-evenly;
+  justify-content: center;
+
+  @media screen and (min-width: 17.5rem) {
+    justify-content: space-evenly;
+  }
 
   @media screen and (min-width: 48rem) {
     flex-wrap: nowrap;

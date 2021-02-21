@@ -1,5 +1,8 @@
 <template>
-  <div class="page-with-header-breadcrumb">
+  <div
+    class="page-with-header-breadcrumb"
+    :class="{ 'page-with-header-breadcrumb--about': onAboutPage }"
+  >
     <AppHeader :is-breadcrumb-needed="true">
       <router-link
         class="universal-tag--xl"
@@ -12,9 +15,7 @@
         </button>
       </router-link>
     </AppHeader>
-    <main>
-      <slot />
-    </main>
+    <slot />
     <AppFooter />
   </div>
 </template>
@@ -37,13 +38,26 @@ export default {
     routerDirection: {
       type: Object,
       required: true
+    },
+    onAboutPage: {
+      type: Boolean
     }
   }
 };
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/_variables.scss";
+
 .page-with-header-breadcrumb {
-  margin-top: 144px;
+  padding-top: 0;
+
+  @media screen and (min-width: 48rem) {
+    padding-top: 144px;
+  }
+}
+
+.page-with-header-breadcrumb--about {
+  @include horizontal-grad;
 }
 </style>

@@ -60,6 +60,10 @@ p,
   text-transform: uppercase;
 }
 
+p + p {
+  margin-top: 2rem;
+}
+
 // Parnaso headings
 h1,
 .h1,

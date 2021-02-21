@@ -183,6 +183,7 @@ export default {
   justify-content: flex-end;
   align-items: center;
   padding: 1rem 1rem;
+  background: transparent;
 
   @media screen and (min-width: 48rem) {
     position: fixed;
@@ -211,7 +212,7 @@ export default {
 .header__menu-panel {
   width: 100vw;
   padding: 6rem 0 3rem 0;
-  background-color: #fff;
+  background-color: white;
   border-bottom: solid 0.5px $black;
   position: absolute;
   top: 0%;

@@ -4,7 +4,10 @@
     :class="{ 'header--with-breadcrumb': isBreadcrumbNeeded }"
   >
     <template v-if="isBreadcrumbNeeded">
-      <div class="header__breadcrumb">
+      <div
+        class="header__breadcrumb"
+        :class="{ 'header__breadcrumb--scrolled': isBreadcrumbScrolling }"
+      >
         <slot />
       </div>
     </template>
@@ -156,7 +159,9 @@ export default {
   name: "AppHeader",
   data() {
     return {
-      isMenuOpen: false
+      isMenuOpen: false,
+      pixelsDown: 0,
+      isBreadcrumbScrolling: false
     };
   },
   props: {
@@ -168,8 +173,32 @@ export default {
   methods: {
     toggleMenuView() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    checkBreadcrumbScroll() {
+      this.pixelsDown = window.pageYOffset;
+      if (this.pixelsDown > 40) {
+        this.isBreadcrumbScrolling = true;
+      } else {
+        this.isBreadcrumbScrolling = false;
+      }
     }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.checkBreadcrumbScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.checkBreadcrumbScroll);
   }
+  // watch: {
+  //   pixelsDown: () => {
+  //     console.log(this.pixelsDown);
+  //     if (this.pixelsDown > 144) {
+  //       this.isBreadcrumbScrolling = true;
+  //     } else {
+  //       this.isBreadcrumbScrolling = false;
+  //     }
+  //   }
+  // }
 };
 </script>
 
@@ -199,6 +228,11 @@ export default {
 
 .header__breadcrumb {
   padding-right: 2rem;
+  transition: opacity 0.5s;
+}
+
+.header__breadcrumb--scrolled {
+  opacity: 0;
 }
 
 .header__menu-button {
@@ -206,7 +240,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header__menu-panel {
@@ -217,6 +251,7 @@ export default {
   position: absolute;
   top: 0%;
   left: 0;
+  z-index: 2;
 
   @media screen and (min-width: 60rem) {
     padding: 6rem 0;

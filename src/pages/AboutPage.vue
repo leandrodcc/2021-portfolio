@@ -57,7 +57,9 @@
           </section>
         </div>
       </div>
-      <AppWarning warning-message="Copied e-mail to clipboard!" />
+      <AppWarning :warning-is-needed="callForWarning">
+        Copied e-mail to clipboard!
+      </AppWarning>
     </main>
   </HeaderFooterBreadcrumbPageLayout>
 </template>
@@ -70,6 +72,7 @@ export default {
   name: "AboutPage",
   data() {
     return {
+      callForWarning: false,
       clipboardButtonText: undefined
     };
   },
@@ -85,7 +88,8 @@ export default {
       this.clipboardButtonText = event.target.innerText;
       try {
         await navigator.clipboard.writeText(this.clipboardButtonText);
-        alert("Copied e-mail to clipboard!");
+        this.callForWarning = true;
+        // setTimeout(() => (this.callForWarning = false), 1000);
       } catch (err) {
         alert("Failed to copy e-mail to clipboard!", err);
       }

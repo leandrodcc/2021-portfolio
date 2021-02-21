@@ -1,14 +1,20 @@
 <template>
-  <div class="warning-card">
-    <p class="warning-card__message">{{ warningMessage }}</p>
-  </div>
+  <transition name="warning-fade">
+    <div v-if="warningIsNeeded">
+      <div class="warning-sign">
+        <p class="warning-sign__message">
+          <slot />
+        </p>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <script>
 export default {
   props: {
-    warningMessage: {
-      type: String,
+    warningIsNeeded: {
+      type: Boolean,
       required: true
     }
   }
@@ -18,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
 
-.warning-card {
+.warning-sign {
   width: auto;
   position: fixed;
   top: 10%;
@@ -30,7 +36,16 @@ export default {
   text-align: center;
 
   @media screen and (min-width: 48rem) {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
+}
+
+.warning-fade-enter-active,
+.warning-fade-leave-active {
+  transition: all 0.3s;
+}
+.warning-fade-enter,
+.warning-fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -189,16 +189,6 @@ export default {
   beforeDestroy() {
     window.removeEventListener("scroll", this.checkBreadcrumbScroll);
   }
-  // watch: {
-  //   pixelsDown: () => {
-  //     console.log(this.pixelsDown);
-  //     if (this.pixelsDown > 144) {
-  //       this.isBreadcrumbScrolling = true;
-  //     } else {
-  //       this.isBreadcrumbScrolling = false;
-  //     }
-  //   }
-  // }
 };
 </script>
 

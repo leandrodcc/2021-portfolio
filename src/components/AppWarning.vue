@@ -42,10 +42,14 @@ export default {
 
 .warning-fade-enter-active,
 .warning-fade-leave-active {
+  position: fixed;
+  top: 10%;
+  width: inherit;
   transition: all 0.3s;
 }
 .warning-fade-enter,
 .warning-fade-leave-to {
   opacity: 0;
+  transform: translateY(1rem);
 }
 </style>

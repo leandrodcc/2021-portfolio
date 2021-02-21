@@ -89,7 +89,7 @@ export default {
       try {
         await navigator.clipboard.writeText(this.clipboardButtonText);
         this.callForWarning = true;
-        // setTimeout(() => (this.callForWarning = false), 1000);
+        setTimeout(() => (this.callForWarning = false), 1500);
       } catch (err) {
         alert("Failed to copy e-mail to clipboard!", err);
       }

@@ -57,12 +57,14 @@
           </section>
         </div>
       </div>
+      <AppWarning warning-message="Copied e-mail to clipboard!" />
     </main>
   </HeaderFooterBreadcrumbPageLayout>
 </template>
 
 <script>
 import HeaderFooterBreadcrumbPageLayout from "@/layouts/HeaderFooterBreadcrumbPageLayout";
+import AppWarning from "@/components/AppWarning";
 
 export default {
   name: "AboutPage",
@@ -72,7 +74,8 @@ export default {
     };
   },
   components: {
-    HeaderFooterBreadcrumbPageLayout
+    HeaderFooterBreadcrumbPageLayout,
+    AppWarning
   },
   methods: {
     async copyEmailToClipboard(event) {

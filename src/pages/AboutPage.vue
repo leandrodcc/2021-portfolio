@@ -77,7 +77,7 @@
           </section>
         </div>
       </div>
-      <AppWarning :warning-is-needed="callForWarning">
+      <AppWarning :is-warning-needed="callForWarning">
         Copied e-mail to clipboard!
       </AppWarning>
     </main>
@@ -109,7 +109,7 @@ export default {
       try {
         await navigator.clipboard.writeText(this.clipboardButtonText);
         this.callForWarning = true;
-        setTimeout(() => (this.callForWarning = false), 1500);
+        setTimeout(() => (this.callForWarning = false), 1200);
       } catch (err) {
         alert("Failed to copy e-mail to clipboard!", err);
       }

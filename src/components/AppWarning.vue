@@ -1,6 +1,6 @@
 <template>
   <transition name="warning-fade">
-    <div v-if="warningIsNeeded">
+    <div v-if="isWarningNeeded">
       <div class="warning-sign">
         <p class="warning-sign__message">
           <slot />
@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    warningIsNeeded: {
+    isWarningNeeded: {
       type: Boolean,
       required: true
     }

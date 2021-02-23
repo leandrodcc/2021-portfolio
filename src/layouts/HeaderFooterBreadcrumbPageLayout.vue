@@ -49,14 +49,6 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/_variables.scss";
 
-.page-with-header-breadcrumb {
-  padding-top: 0;
-
-  @media screen and (min-width: 48rem) {
-    padding-top: 144px;
-  }
-}
-
 .page-with-header-breadcrumb--about {
   @include horizontal-grad;
 }

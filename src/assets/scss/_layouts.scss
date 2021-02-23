@@ -1,0 +1,8 @@
+.page-with-header-breadcrumb,
+.page-with-header-footer {
+  padding-top: 0;
+
+  @media screen and (min-width: 48rem) {
+    padding-top: 144px;
+  }
+}

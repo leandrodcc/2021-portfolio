@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-with-header-footer">
     <AppHeader />
     <main class="container">
       <slot />

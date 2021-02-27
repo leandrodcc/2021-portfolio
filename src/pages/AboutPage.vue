@@ -93,7 +93,7 @@ export default {
   data() {
     return {
       callForWarning: false,
-      clipboardButtonText: undefined
+      copyToClipboardText: undefined
     };
   },
   components: {
@@ -105,7 +105,7 @@ export default {
       if (!navigator.clipboard) {
         return;
       }
-      this.clipboardButtonText = event.target.innerText;
+      this.copyToClipboardText = event.target.innerText;
       try {
         await navigator.clipboard.writeText(this.clipboardButtonText);
         this.callForWarning = true;

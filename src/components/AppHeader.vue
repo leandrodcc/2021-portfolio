@@ -230,7 +230,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 3;
+  z-index: 6;
 }
 
 .header__menu-panel {
@@ -241,7 +241,7 @@ export default {
   position: absolute;
   top: 0%;
   left: 0;
-  z-index: 2;
+  z-index: 5;
 
   @media screen and (min-width: 60rem) {
     padding: 6rem 0;

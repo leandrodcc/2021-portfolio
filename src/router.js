@@ -20,6 +20,12 @@ export default new Router({
         import(/* webpackChunkName: "about-contacts" */ "@/pages/AboutPage.vue")
     },
     {
+      path: "/post",
+      name: "Post",
+      component: () =>
+        import(/* webpackChunkName: "about-contacts" */ "@/pages/PostPage.vue")
+    },
+    {
       path: "*",
       name: "PageNotFound",
       component: () =>

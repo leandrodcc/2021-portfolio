@@ -72,12 +72,12 @@
         <p>
           I close my eyes and open them again But I can’t wake up from this deep
           dream. Warm velvet skin, lips with a soft light on them Eyes that are
-          wet like rain, it’s all beautiful...Your warm hands, your soft smile
-          In your world, it’s all beautiful. It just comes automatic.
+          wet like rain, <code>it’s all beautiful...</code> warm hands, your
+          soft smile In your world, it’s all beautiful. It just comes automatic.
         </p>
-        <code data-lang="js">
-          nanan
-        </code>
+        <pre><code>p { color: red; }
+body { background-color: #eee; }</code></pre>
+        <p>It just comes so natural...it just comes Automatic.</p>
       </main>
     </article>
   </HeaderFooterBreadcrumbPageLayout>
@@ -160,8 +160,12 @@ export default {
 
 .post__content blockquote {
   margin: 0 auto;
-  padding: 3rem 0 3rem;
+  padding: 3rem 0;
   max-width: 45.5rem;
   text-align: center;
+}
+
+.post__content pre {
+  margin: 2rem 0;
 }
 </style>

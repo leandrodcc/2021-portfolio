@@ -1,0 +1,32 @@
+p > code,
+li > code,
+dd > code,
+td > code {
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  margin: 0;
+  background-color: $black-muted;
+  border-radius: 2px;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+}
+
+pre {
+  display: block;
+  background-color: $black-muted;
+  border-radius: 2px;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+}
+
+pre code {
+  background: none;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 6.25rem;
+  padding: 0;
+  line-height: 1.3;
+  word-spacing: normal;
+}

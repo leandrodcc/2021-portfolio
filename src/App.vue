@@ -14,6 +14,7 @@
 @import "@/assets/scss/_grid.scss";
 @import "@/assets/scss/_layouts.scss";
 @import "@/assets/scss/_tags.scss";
+@import "@/assets/scss/_code.scss";
 
 @mixin scanners {
   content: "";

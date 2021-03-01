@@ -33,6 +33,51 @@
           selfish, I'd die of shock. It's like that book I read in the 9th grade
           that said 'tis a far far better thing doing stuff for other people.
         </p>
+        <figure>
+          <img src="Image/img.jpg" alt="" />
+          <figcaption>
+            Sometimes, shit can happen. It’s all gonna work well in the end.
+          </figcaption>
+        </figure>
+        <p>
+          How, how do you like this to be? Natural and automatic for ya...I love
+          the way you wrap around my heart, filling me up I didn’t know before,
+          it just comes automatic My senses move at the smallest body movements
+          It just comes so natural It just comes Automatic. I’ve waited for
+          these fantasies every day My heart is breathing toward you The
+          momentarily scattering sounds reach you Telling you all the truths
+          about my love. Warm velvet skin, lips with a soft light on them Eyes
+          that are wet like rain, it’s all beautiful. I love the way you wrap
+          around my heart, filling me up I didn’t know before, it just comes
+          automatic My senses move at the smallest body movements It just comes
+          so natural, it just comes automatic — The sugar rush comes over me at
+          once I’m so naturally stopped in front of you I close my eyes and open
+          them again But I can’t wake up from this deep dream. Warm velvet skin,
+          lips with a soft light on them Eyes that are wet like rain, it’s all
+          beautiful...Your warm hands, your soft smile In your world, it’s all
+          beautiful. It just comes automatic.
+        </p>
+        <blockquote>
+          <h2>The child looks and recognizes before it can speak.</h2>
+          <p>— John Berger, Ways of Seeing. 1970.</p>
+        </blockquote>
+        <p>
+          It just comes so natural, it just comes automatic — The sugar rush
+          comes over me at once I’m so naturally stopped in front of you I close
+          my eyes and open them again But I can’t wake up from this deep dream.
+          Warm velvet skin, lips with a soft light on them Eyes that are wet
+          like rain, it’s all beautiful...Your warm hands, your soft smile In
+          your world, it’s all beautiful. It just comes automatic.
+        </p>
+        <p>
+          I close my eyes and open them again But I can’t wake up from this deep
+          dream. Warm velvet skin, lips with a soft light on them Eyes that are
+          wet like rain, it’s all beautiful...Your warm hands, your soft smile
+          In your world, it’s all beautiful. It just comes automatic.
+        </p>
+        <code data-lang="js">
+          nanan
+        </code>
       </main>
     </article>
   </HeaderFooterBreadcrumbPageLayout>
@@ -52,22 +97,23 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/_variables.scss";
 
+/* post heading styles */
 .post__heading {
   display: grid;
-  grid-template: 1fr / repeat(6, 1fr);
+  grid-template: 1fr / repeat(12, 1fr);
   align-items: center;
 }
 
 .post__image {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 7;
   grid-row: 1;
-  background-color: $pink-200;
+  background-color: $pink;
   min-height: 23rem;
   width: 100%;
 }
 
 .post__infos {
-  grid-column: 4 / span 2;
+  grid-column: 6 / span 5;
   grid-row: 1;
 }
 
@@ -93,7 +139,29 @@ export default {
   max-width: 40.375rem;
 }
 
+/* post content styles */
 .post__content {
   padding: 2.5rem 0 6rem;
+}
+
+.post__content figure {
+  padding: 2.5rem 0 2.5rem;
+}
+
+.post__content img {
+  width: 100%;
+  height: 23rem;
+  background: $pink;
+}
+
+.post__content figcaption {
+  margin-top: 0.5rem;
+}
+
+.post__content blockquote {
+  margin: 0 auto;
+  padding: 3rem 0 3rem;
+  max-width: 45.5rem;
+  text-align: center;
 }
 </style>

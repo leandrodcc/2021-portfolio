@@ -56,11 +56,13 @@ p,
 }
 
 .p--small--normal,
-.p--small--caps {
+.p--small--caps,
+figcaption {
   @include p-small;
 }
 
-.p--small--caps {
+.p--small--caps,
+figcaption {
   text-transform: uppercase;
 }
 
@@ -133,8 +135,8 @@ h2,
 }
 
 // Code typography
-pre p,
-code p {
+pre,
+code {
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   color: #fff;
@@ -145,6 +147,7 @@ blockquote h2 {
   font-family: $title-font;
   font-size: 1.875rem;
   line-height: 1.1;
+  margin-bottom: 1rem;
 
   @media screen and (min-width: 60rem) {
     font-size: 3.25rem;

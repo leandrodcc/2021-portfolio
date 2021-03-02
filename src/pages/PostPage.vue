@@ -133,12 +133,14 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 1rem;
 
   @media screen and (min-width: 60rem) {
     display: initial;
     text-align: unset;
     grid-column: 6 / span 5;
     grid-row: 1;
+    padding: 0;
   }
 
   @media screen and (max-width: 60rem) {
@@ -149,6 +151,10 @@ export default {
       background: $black;
       margin: 1.5rem 0;
     }
+  }
+
+  @media only screen and (min-height: 81.25rem) and (max-device-width: 64rem) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    grid-column: 6 / span 6;
   }
 }
 
@@ -211,10 +217,13 @@ export default {
   max-width: 18rem;
   text-align: initial;
 
+  @media screen and (min-width: 48rem) {
+    text-align: center;
+    max-width: 45.5rem;
+  }
+
   @media screen and (min-width: 60rem) {
     padding: 3rem 0;
-    max-width: 45.5rem;
-    text-align: center;
   }
 }
 

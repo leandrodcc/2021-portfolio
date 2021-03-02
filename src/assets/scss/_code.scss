@@ -17,6 +17,9 @@ pre {
   border-radius: 2px;
   text-align: left;
   padding: 1.25rem 1.5rem;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+
   &:before {
     content: attr(data-lang);
     display: block;
@@ -32,9 +35,7 @@ pre {
 pre code {
   background: none;
   tab-size: 4;
-  white-space: pre;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
+  white-space: pre-wrap;
   max-width: 100%;
   min-width: 6.25rem;
   padding: 0;

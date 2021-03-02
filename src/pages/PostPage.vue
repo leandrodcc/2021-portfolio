@@ -75,7 +75,7 @@
           wet like rain, <code>it’s all beautiful...</code> warm hands, your
           soft smile In your world, it’s all beautiful. It just comes automatic.
         </p>
-        <pre><code>p { color: red; }
+        <pre data-lang="css"><code>p { color: red; }
 body { background-color: #eee; }</code></pre>
         <p>It just comes so natural...it just comes Automatic.</p>
       </main>
@@ -100,21 +100,56 @@ export default {
 /* post heading styles */
 .post__heading {
   display: grid;
-  grid-template: 1fr / repeat(12, 1fr);
-  align-items: center;
+  grid-template: repeat(2, auto) / 1fr;
+  align-items: flex-start;
+
+  @media screen and (min-width: 60rem) {
+    align-items: center;
+    grid-template: 1fr / repeat(12, 1fr);
+  }
 }
 
 .post__image {
-  grid-column: 1 / span 7;
-  grid-row: 1;
+  grid-column: auto;
+  grid-row: auto;
   background-color: $pink;
-  min-height: 23rem;
+  min-height: 12.5rem;
   width: 100%;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 60rem) {
+    grid-column: 1 / span 7;
+    grid-row: 1;
+    min-height: 23rem;
+    margin-bottom: 0;
+  }
 }
 
 .post__infos {
-  grid-column: 6 / span 5;
-  grid-row: 1;
+  grid-column: auto;
+  grid-row: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media screen and (min-width: 60rem) {
+    display: initial;
+    text-align: unset;
+    grid-column: 6 / span 5;
+    grid-row: 1;
+  }
+
+  @media screen and (max-width: 60rem) {
+    &::after {
+      content: "";
+      width: 6.25rem;
+      height: 0.0313rem;
+      background: $black;
+      margin: 1.5rem 0;
+    }
+  }
 }
 
 .post__meta {
@@ -141,17 +176,29 @@ export default {
 
 /* post content styles */
 .post__content {
-  padding: 2.5rem 0 6rem;
+  padding: 0 1rem 3rem;
+
+  @media screen and (min-width: 60rem) {
+    padding: 2.5rem 0 6rem;
+  }
 }
 
 .post__content figure {
-  padding: 2.5rem 0 2.5rem;
+  padding: 2rem 0;
+
+  @media screen and (min-width: 60rem) {
+    padding: 2.5rem 0;
+  }
 }
 
 .post__content img {
   width: 100%;
-  height: 23rem;
+  height: 12.5rem;
   background: $pink;
+
+  @media screen and (min-width: 60rem) {
+    height: 23rem;
+  }
 }
 
 .post__content figcaption {
@@ -160,9 +207,15 @@ export default {
 
 .post__content blockquote {
   margin: 0 auto;
-  padding: 3rem 0;
-  max-width: 45.5rem;
-  text-align: center;
+  padding: 2.5rem 0;
+  max-width: 18rem;
+  text-align: initial;
+
+  @media screen and (min-width: 60rem) {
+    padding: 3rem 0;
+    max-width: 45.5rem;
+    text-align: center;
+  }
 }
 
 .post__content pre {

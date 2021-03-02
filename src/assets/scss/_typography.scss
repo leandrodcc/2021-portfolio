@@ -67,7 +67,11 @@ figcaption {
 }
 
 p + p {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+
+  @media screen and (min-width: 60rem) {
+    margin-top: 2rem;
+  }
 }
 
 // Parnaso headings
@@ -138,8 +142,12 @@ h2,
 pre,
 code {
   font-family: "Inconsolata", monospace;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #fff;
+
+  @media screen and (min-width: 60rem) {
+    font-size: 1.125rem;
+  }
 }
 
 // Blockquote typography

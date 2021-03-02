@@ -16,3 +16,26 @@
     padding: 0;
   }
 }
+
+.container--hero {
+  @include containerStructure;
+
+  @media screen and (min-width: 48rem) {
+    max-width: 40rem;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 75rem) {
+    max-width: 72rem;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 82rem) {
+    max-width: 80rem;
+    padding: 0;
+  }
+
+  @media only screen and (min-height: 81.25rem) and (max-device-width: 64rem) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    max-width: 58rem;
+  }
+}

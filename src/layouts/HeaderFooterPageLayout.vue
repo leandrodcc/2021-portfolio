@@ -1,9 +1,7 @@
 <template>
   <div class="page-with-header-footer">
     <AppHeader />
-    <main class="container">
-      <slot />
-    </main>
+    <slot />
     <AppFooter />
   </div>
 </template>

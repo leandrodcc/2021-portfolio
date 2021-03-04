@@ -27,11 +27,15 @@
       <main class="post__content container">
         <p>
           The LA city bus driver who took a chance on an unknown kid. Want to
-          practice parking? I do not wear polyester hair, okay? Are we going
-          somewhere to make left turns? As if! Do you know what time it is? You
-          know, If I ever saw you do anything that wasn't ninety percent
-          selfish, I'd die of shock. It's like that book I read in the 9th grade
-          that said 'tis a far far better thing doing stuff for other people.
+          practice parking?
+          <a href="https://github.com/" target="_blank"
+            >I do not wear polyester hair, okay?</a
+          >
+          Are we going somewhere to make left turns? As if! Do you know what
+          time it is? You know, If I ever saw you do anything that wasn't ninety
+          percent selfish, I'd die of shock. It's like that book I read in the
+          9th grade that said 'tis a far far better thing doing stuff for other
+          people.
         </p>
         <figure>
           <img src="Image/img.jpg" alt="" />
@@ -187,47 +191,58 @@ export default {
   @media screen and (min-width: 60rem) {
     padding: 2.5rem 0 6rem;
   }
-}
 
-.post__content figure {
-  padding: 2rem 0;
+  a {
+    position: relative;
+    padding-bottom: 0.125rem;
+    border-bottom: solid 0.4px $black-muted;
+    transition: background 0.3s;
 
-  @media screen and (min-width: 60rem) {
+    &:hover {
+      background: $pink-300;
+    }
+  }
+
+  figure {
+    padding: 2rem 0;
+
+    @media screen and (min-width: 60rem) {
+      padding: 2.5rem 0;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 12.5rem;
+    background: $pink;
+
+    @media screen and (min-width: 60rem) {
+      height: 23rem;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+  }
+
+  blockquote {
+    margin: 0 auto;
     padding: 2.5rem 0;
-  }
-}
+    max-width: 18rem;
+    text-align: initial;
 
-.post__content img {
-  width: 100%;
-  height: 12.5rem;
-  background: $pink;
+    @media screen and (min-width: 48rem) {
+      text-align: center;
+      max-width: 45.5rem;
+    }
 
-  @media screen and (min-width: 60rem) {
-    height: 23rem;
-  }
-}
-
-.post__content figcaption {
-  margin-top: 0.5rem;
-}
-
-.post__content blockquote {
-  margin: 0 auto;
-  padding: 2.5rem 0;
-  max-width: 18rem;
-  text-align: initial;
-
-  @media screen and (min-width: 48rem) {
-    text-align: center;
-    max-width: 45.5rem;
+    @media screen and (min-width: 60rem) {
+      padding: 3rem 0;
+    }
   }
 
-  @media screen and (min-width: 60rem) {
-    padding: 3rem 0;
+  pre {
+    margin: 2rem 0;
   }
-}
-
-.post__content pre {
-  margin: 2rem 0;
 }
 </style>

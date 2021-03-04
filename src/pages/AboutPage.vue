@@ -2,7 +2,7 @@
   <HeaderFooterBreadcrumbPageLayout
     breadcrumb-text="To Home page"
     :on-about-page="true"
-    :router-direction="{ name: 'Home' }"
+    :router-direction="{ name: 'Projects' }"
   >
     <main class="about-page">
       <div class="about-page__container">

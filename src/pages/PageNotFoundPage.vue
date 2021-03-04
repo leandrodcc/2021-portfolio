@@ -14,7 +14,7 @@
           </p>
           <router-link
             class="universal-tag--xl"
-            :to="{ name: 'Home' }"
+            :to="{ name: 'Projects' }"
             custom
             v-slot="{ navigate }"
             ><button @click="navigate" @keypress.enter="navigate">

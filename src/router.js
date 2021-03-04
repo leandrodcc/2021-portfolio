@@ -9,7 +9,6 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Home",
       component: () =>
         import(/* webpackChunkName: "home" */ "@/pages/HomePage.vue"),
       children: [

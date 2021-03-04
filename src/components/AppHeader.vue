@@ -135,7 +135,7 @@
             <ul>
               <li class="header__menu-item">
                 <p aria-hidden="true">I. Browse my projects</p>
-                <router-link :to="{ name: 'Home' }" class="h1--mega"
+                <router-link :to="{ name: 'Projects' }" class="h1--mega"
                   >Home</router-link
                 >
               </li>

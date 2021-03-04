@@ -23,7 +23,9 @@
       </ul>
     </nav>
     <main class="container">
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </main>
   </HeaderFooterPageLayout>
 </template>
@@ -121,11 +123,43 @@ export default {
     }
 
     a {
+      position: relative;
       @media screen and (max-width: 48rem) {
         font-size: 0.75rem;
         letter-spacing: 0.03em;
       }
+
+      &.router-link-exact-active {
+        &::before {
+          content: "— ";
+        }
+
+        &::after {
+          @media screen and (max-width: 48rem) {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: $pink;
+            filter: blur(1rem);
+          }
+        }
+      }
     }
   }
+}
+
+/* home nav transitions */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -11,7 +11,34 @@ export default new Router({
       path: "/",
       name: "Home",
       component: () =>
-        import(/* webpackChunkName: "home" */ "@/pages/HomePage.vue")
+        import(/* webpackChunkName: "home" */ "@/pages/HomePage.vue"),
+      children: [
+        {
+          path: "",
+          alias: "projects",
+          name: "Projects",
+          component: () =>
+            import(
+              /* webpackChunkName: "projects-view" */ "@/views/HomeProjectsView.vue"
+            )
+        },
+        {
+          path: "photography",
+          name: "Photography",
+          component: () =>
+            import(
+              /* webpackChunkName: "photography-view" */ "@/views/HomePhotographyView.vue"
+            )
+        },
+        {
+          path: "journal",
+          name: "Journal",
+          component: () =>
+            import(
+              /* webpackChunkName: "journal-view" */ "@/views/HomeJournalView.vue"
+            )
+        }
+      ]
     },
     {
       path: "/about-contacts",

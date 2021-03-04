@@ -25,8 +25,9 @@ a {
   }
 }
 
-// Paragraph styles
+// Paragraph and link styles
 p,
+a,
 .p--augmented,
 .p--small--normal,
 .p--small--caps {
@@ -34,7 +35,8 @@ p,
   line-height: 1.5;
 }
 
-p {
+p,
+a {
   font-size: 1.25rem;
 }
 
@@ -44,6 +46,7 @@ p {
 }
 
 p,
+a,
 .p--augmented {
   @media screen and (max-width: 60rem) {
     font-size: 1rem;

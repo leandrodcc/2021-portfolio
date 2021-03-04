@@ -13,38 +13,17 @@
         focus on photography.
       </p>
     </section>
+    <nav class="home__nav container">
+      <ul>
+        <li><router-link :to="{ name: 'Projects' }">Projects</router-link></li>
+        <li>
+          <router-link :to="{ name: 'Photography' }">Photography</router-link>
+        </li>
+        <li><router-link :to="{ name: 'Journal' }">Journal</router-link></li>
+      </ul>
+    </nav>
     <main class="container">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut diam
-        at massa imperdiet ultrices vel ac tellus. Etiam sollicitudin eu tellus
-        et tempor. Nunc pharetra, diam eget cursus blandit, diam dolor ultricies
-        ipsum, quis laoreet ligula elit ac enim. Nulla facilisi. Praesent id
-        arcu sed arcu facilisis luctus. Vivamus nec aliquet arcu. Aenean quis
-        molestie tellus. Vestibulum ante ipsum primis in faucibus orci luctus et
-        ultrices posuere cubilia curae; Suspendisse consectetur lacus vitae dui
-        lacinia, et blandit sapien iaculis. Sed euismod tellus sapien, et
-        accumsan est ultricies id. Pellentesque gravida aliquet metus malesuada
-        mattis. Aliquam volutpat dapibus enim a rhoncus. Aliquam porta
-        consectetur tellus, nec volutpat erat tincidunt eu. Pellentesque
-        habitant morbi tristique senectus et netus et malesuada fames ac turpis
-        egestas. Integer ex nulla, lobortis sit amet bibendum non, finibus
-        mollis urna. Vivamus et turpis ac velit finibus rutrum. Morbi pulvinar
-        nisi vitae justo tristique gravida. Duis et vestibulum sem. Donec et
-        augue eu orci varius blandit. Maecenas tempor justo diam, eget consequat
-        ante fringilla fermentum. Cras eget ornare dui. Nam eget odio porttitor,
-        faucibus elit ac, lobortis mi. Morbi dui mi, consectetur vitae semper
-        eu, facilisis sagittis leo. Phasellus consequat felis diam, quis semper
-        magna auctor id. Morbi ut leo sit amet nisi ornare rhoncus aliquam a
-        turpis. Curabitur tristique tempus dictum. Praesent ultrices quam at
-        consequat consectetur. Donec id vestibulum dolor. Nulla lobortis justo
-        purus. Donec cursus suscipit lorem ac aliquam. In in nisi eget orci
-        consequat posuere non ut lectus. Pellentesque maximus fringilla turpis
-        sed ullamcorper. Maecenas posuere nisl sed lacinia sollicitudin. Etiam
-        nisl neque, placerat venenatis sollicitudin ac, efficitur sed turpis. Ut
-        a egestas quam. Proin varius dui eget metus fringilla volutpat. Nulla
-        eget justo tristique, fringilla sem non, facilisis mi. Proin vel
-        ultricies tortor, non blandit nisi.
-      </p>
+      <router-view></router-view>
     </main>
   </HeaderFooterPageLayout>
 </template>
@@ -61,6 +40,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/_variables.scss";
+
 /* hero styles */
 
 .home__hero {
@@ -110,6 +91,40 @@ export default {
 
     @media screen and (min-width: 82rem) {
       padding-left: 20rem;
+    }
+  }
+}
+
+/* nav styles */
+.home__nav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  border-top: solid 0.5px $black;
+  border-bottom: solid 0.5px $black;
+
+  @media screen and (min-width: 48rem) {
+    border-top: solid 1px $black;
+    border-bottom: solid 1px $black;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    :nth-child(2) {
+      margin: 0 1rem;
+
+      @media screen and (min-width: 48rem) {
+        margin: 0 1.5rem;
+      }
+    }
+
+    a {
+      @media screen and (max-width: 48rem) {
+        font-size: 0.75rem;
+        letter-spacing: 0.03em;
+      }
     }
   }
 }

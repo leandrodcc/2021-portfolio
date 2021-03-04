@@ -213,6 +213,11 @@ export default {
     margin-right: 1rem;
     margin-bottom: 1rem;
   }
+
+  a {
+    font-size: 1rem;
+    line-height: normal;
+  }
 }
 
 .about-page__about-section__title,

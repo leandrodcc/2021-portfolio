@@ -131,11 +131,13 @@ export default {
 
       &.router-link-exact-active {
         &::before {
-          content: "— ";
+          @media screen and (min-width: 17.625rem) {
+            content: "— ";
+          }
         }
 
         &::after {
-          @media screen and (max-width: 48rem) {
+          @media screen and (max-width: 47.5rem) {
             content: "";
             position: absolute;
             top: 0;

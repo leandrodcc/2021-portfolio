@@ -161,6 +161,7 @@ export default {
     return {
       isMenuOpen: false,
       pixelsDown: 0,
+      mediaQuery: window.matchMedia("(min-width: 768px)"),
       isBreadcrumbScrolling: false
     };
   },
@@ -175,11 +176,13 @@ export default {
       this.isMenuOpen = !this.isMenuOpen;
     },
     checkBreadcrumbScroll() {
-      this.pixelsDown = window.pageYOffset;
-      if (this.pixelsDown > 40) {
-        this.isBreadcrumbScrolling = true;
-      } else {
-        this.isBreadcrumbScrolling = false;
+      if (this.mediaQuery.matches) {
+        this.pixelsDown = window.pageYOffset;
+        if (this.pixelsDown > 40) {
+          this.isBreadcrumbScrolling = true;
+        } else {
+          this.isBreadcrumbScrolling = false;
+        }
       }
     }
   },

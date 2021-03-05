@@ -1,6 +1,6 @@
 <template>
   <section class="journal-list">
-    <h1 class="to-uppercase">— Projects</h1>
+    <h1 class="journal-list__title to-uppercase">— Journal</h1>
     <JournalEntry />
   </section>
 </template>
@@ -19,5 +19,11 @@ export default {
 <style lang="scss">
 .journal-list {
   padding-top: 3.5rem;
+  padding-bottom: 4rem;
+}
+
+.journal-list__title {
+  text-align: right;
+  padding-bottom: 3.5rem;
 }
 </style>

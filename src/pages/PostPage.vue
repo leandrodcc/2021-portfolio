@@ -193,7 +193,6 @@ export default {
   }
 
   a {
-    position: relative;
     padding-bottom: 0.125rem;
     border-bottom: solid 0.4px $black-muted;
     transition: background 0.3s;

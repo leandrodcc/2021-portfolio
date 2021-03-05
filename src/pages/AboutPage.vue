@@ -8,7 +8,7 @@
       <div class="about-page__container">
         <div class="about-page__content">
           <section class="about-page__about-section">
-            <h1 class="about-page__about-section__title h1--mega">
+            <h1 class="about-page__about-section__title to-uppercase h1--mega">
               About
               <span aria-hidden="true" class="h1--sga--mega">&#8212;</span>
             </h1>
@@ -38,7 +38,9 @@
             </div>
           </section>
           <section class="about-page__contacts-section">
-            <h1 class="about-page__contacts-section__title h1--mega">
+            <h1
+              class="about-page__contacts-section__title to-uppercase h1--mega"
+            >
               <span aria-hidden="true" class="h1--sga--mega">&#8212;</span>
               Contacts
             </h1>
@@ -218,11 +220,6 @@ export default {
     font-size: 1rem;
     line-height: normal;
   }
-}
-
-.about-page__about-section__title,
-.about-page__contacts-section__title {
-  text-transform: uppercase;
 }
 
 .copy-email {

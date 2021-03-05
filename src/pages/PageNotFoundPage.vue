@@ -1,10 +1,9 @@
 <template>
   <div>
-    <AppHeader />
     <main class="page-not-found-page">
       <div class="page-not-found-page__container">
         <div class="page-not-found-page__content">
-          <h1 class="page-not-found-page__title h1--sga--mega">
+          <h1 class="page-not-found-page__title h1--sga--mega to-uppercase">
             Error 404: <span class="h1--mega">Page not found</span>.
           </h1>
           <p class="page-not-found-page__description p--augmented">
@@ -79,7 +78,6 @@ export default {
 }
 
 .page-not-found-page__title {
-  text-transform: uppercase;
   text-align: right;
 }
 </style>

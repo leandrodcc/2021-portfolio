@@ -133,13 +133,13 @@
         >
           <div class="container">
             <ul>
-              <li class="header__menu-item">
+              <li class="header__menu-item to-uppercase">
                 <p aria-hidden="true">I. Browse my projects</p>
                 <router-link :to="{ name: 'Projects' }" class="h1--mega"
                   >Home</router-link
                 >
               </li>
-              <li class="header__menu-item">
+              <li class="header__menu-item to-uppercase">
                 <p aria-hidden="true">II. Get to know me, talk to me</p>
                 <router-link :to="{ name: 'AboutContacts' }" class="h1--mega"
                   >About
@@ -262,8 +262,6 @@ export default {
 }
 
 .header__menu-item {
-  text-transform: uppercase;
-
   &:first-child {
     margin-bottom: 1rem;
   }

@@ -1,19 +1,19 @@
 <template>
   <HeaderFooterPageLayout>
     <section class="home__hero container--hero">
-      <h1 class="h1--mega">
+      <h1 class="h1--mega to-uppercase">
         <span class="h1--sga--mega">Hi! I'm </span>Leandro Contreras<span
           class="h1--sga--mega"
         >
           — and this is </span
         >my playground<span class="h1--sga--mega">.</span>
       </h1>
-      <p class="p--augmented">
+      <p class="p--augmented to-uppercase">
         I'm a digital designer currently working at Técnico Lisboa, with a major
         focus on photography.
       </p>
     </section>
-    <nav class="home__nav container">
+    <nav class="home__nav container to-uppercase">
       <ul>
         <li><router-link :to="{ name: 'Projects' }">Projects</router-link></li>
         <li>
@@ -64,11 +64,6 @@ export default {
     padding-bottom: 6rem;
   }
 
-  h1,
-  p {
-    text-transform: uppercase;
-  }
-
   h1 {
     @media screen and (min-width: 48rem) {
       padding-right: 4rem;
@@ -101,7 +96,6 @@ export default {
 .home__nav {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  text-transform: uppercase;
   border-top: solid 0.5px $black;
   border-bottom: solid 0.5px $black;
 

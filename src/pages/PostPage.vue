@@ -1,7 +1,7 @@
 <template>
   <HeaderFooterBreadcrumbPageLayout
     breadcrumb-text="To Home page"
-    :router-direction="{ name: 'Home' }"
+    :router-direction="{ name: 'Projects' }"
   >
     <article class="post">
       <header class="post__heading">

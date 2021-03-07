@@ -20,6 +20,10 @@
 .container--hero {
   @include containerStructure;
 
+  @media screen and (max-width: 17.5rem) {
+    padding: 0 0.5rem;
+  }
+
   @media screen and (min-width: 48rem) {
     max-width: 40rem;
     padding: 0;

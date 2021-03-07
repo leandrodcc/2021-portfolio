@@ -23,14 +23,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.journal-list__title {
-  text-align: right;
-  padding-bottom: 3.5rem;
-
-  @media screen and (max-width: 60rem) {
-    display: none;
-  }
-}
-</style>

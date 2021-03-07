@@ -6,3 +6,16 @@
     padding-top: 144px;
   }
 }
+
+// styles for the lists of content in the home sections
+.projects-list,
+.photography-list,
+.journal-list {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  @media screen and (min-width: 60rem) {
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+  }
+}

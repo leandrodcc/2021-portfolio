@@ -140,7 +140,7 @@ export default {
             width: 100%;
             height: 100%;
             background: $pink;
-            filter: blur(1rem);
+            filter: blur(1rem) saturate(2);
           }
         }
       }

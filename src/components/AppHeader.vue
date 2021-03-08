@@ -206,6 +206,7 @@ export default {
   align-items: center;
   padding: 1rem 1rem;
   background: transparent;
+  z-index: 1;
 
   @media screen and (min-width: 48rem) {
     position: fixed;

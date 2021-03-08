@@ -13,20 +13,24 @@
         focus on photography.
       </p>
     </section>
-    <nav class="home__nav container to-uppercase">
-      <ul>
-        <li><router-link :to="{ name: 'Projects' }">Projects</router-link></li>
-        <li>
-          <router-link :to="{ name: 'Photography' }">Photography</router-link>
-        </li>
-        <li><router-link :to="{ name: 'Journal' }">Journal</router-link></li>
-      </ul>
-    </nav>
-    <main class="container">
-      <transition name="fade" mode="out-in">
-        <router-view></router-view>
-      </transition>
-    </main>
+    <section class="home__content">
+      <nav class="home__nav container to-uppercase">
+        <ul>
+          <li>
+            <router-link :to="{ name: 'Projects' }">Projects</router-link>
+          </li>
+          <li>
+            <router-link :to="{ name: 'Photography' }">Photography</router-link>
+          </li>
+          <li><router-link :to="{ name: 'Journal' }">Journal</router-link></li>
+        </ul>
+      </nav>
+      <main class="container">
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </main>
+    </section>
   </HeaderFooterPageLayout>
 </template>
 
@@ -51,6 +55,7 @@ export default {
   padding-bottom: 2rem;
   position: sticky;
   top: 0;
+  z-index: -1;
 
   @media screen and (min-width: 48rem) {
     padding-top: 0;
@@ -94,6 +99,11 @@ export default {
   }
 }
 
+.home__content {
+  width: 100vw;
+  background-color: white;
+}
+
 /* nav styles */
 .home__nav {
   padding-top: 0.5rem;
@@ -102,6 +112,7 @@ export default {
   border-bottom: solid 0.5px $black;
 
   @media screen and (min-width: 48rem) {
+    background-color: #fff;
     border-top: solid 1px $black;
     border-bottom: solid 1px $black;
   }

@@ -26,6 +26,10 @@ export default {
 @import "@/assets/scss/_variables.scss";
 
 .journal-list {
+  .journal-entry {
+    margin-bottom: 1rem;
+  }
+
   .journal-entry:nth-child(2) {
     background-color: $pink-400;
   }
@@ -44,10 +48,7 @@ export default {
 
   .journal-entry:last-child {
     background-color: $pink;
-  }
-
-  .journal-entry:nth-child(n + 2):nth-child(-n + 5) {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 }
 </style>

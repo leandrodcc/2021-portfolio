@@ -49,6 +49,8 @@ export default {
 .home__hero {
   padding-top: 1rem;
   padding-bottom: 2rem;
+  position: sticky;
+  top: 0;
 
   @media screen and (min-width: 48rem) {
     padding-top: 0;

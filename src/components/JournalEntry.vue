@@ -16,12 +16,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/_variables.scss";
-
 .journal-entry {
   width: 100%;
   padding: 1rem;
-  background-color: $pink-400;
 
   @media screen and (min-width: 60rem) {
     padding: 1.5rem 2rem 2rem;

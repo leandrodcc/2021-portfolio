@@ -24,7 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
-
 .warning-sign {
   width: auto;
   position: fixed;
@@ -35,12 +34,10 @@ export default {
   border: solid 0.5px $black;
   padding: 1rem;
   text-align: center;
-
   @media screen and (min-width: 48rem) {
     padding: 1.25rem;
   }
 }
-
 .warning-fade-enter-active,
 .warning-fade-leave-active {
   position: fixed;

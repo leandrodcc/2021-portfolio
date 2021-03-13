@@ -89,7 +89,6 @@
 <script>
 import HeaderFooterBreadcrumbPageLayout from "@/layouts/HeaderFooterBreadcrumbPageLayout";
 import AppWarning from "@/components/AppWarning";
-
 export default {
   name: "AboutPage",
   data() {
@@ -123,7 +122,6 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/_variables.scss";
 @import "@/assets/scss/_grid.scss";
-
 .about-page {
   width: 100%;
   min-height: calc(100vh - 250px);
@@ -131,97 +129,76 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
   @include horizontal-grad;
 }
-
 .about-page__container {
   @include containerStructure;
-
   @media screen and (min-width: 48rem) {
     max-width: 40rem;
   }
-
   @media screen and (min-width: 64rem) {
     max-width: 55rem;
   }
-
   @media screen and (min-width: 75rem) {
     max-width: 68rem;
     padding: 0;
   }
-
   @media screen and (min-width: 87.5rem) {
     max-width: 80rem;
     padding: 0;
   }
 }
-
 .about-page__content > * {
   margin-bottom: 2.5rem;
-
   &:last-child {
     margin-bottom: 4rem;
   }
-
   @media screen and (min-width: 48rem) {
     margin-bottom: 3rem;
-
     &:last-child {
       margin-bottom: 4rem;
     }
   }
 }
-
 .about-page__about-section__title {
   margin-bottom: 1.5rem;
 }
-
 .about-page__about-section__description {
   padding-left: 0;
-
   @media screen and (min-width: 65rem) {
     padding-left: 4.5rem;
   }
 }
-
 .about-page__contacts-section {
   display: flex;
   flex-direction: column;
-
   @media screen and (min-width: 48rem) {
     flex-direction: row;
   }
 }
-
 .about-page__contacts-section__title {
   white-space: nowrap;
   padding-right: 0;
   margin-bottom: 1.5rem;
-
   @media screen and (min-width: 48rem) {
     padding-right: 3rem;
     margin-bottom: 0;
   }
 }
-
 .about-page__contacts-section__contact-box {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-
   .universal-tag--xl {
     margin-right: 1rem;
     margin-bottom: 1rem;
   }
-
   a {
     font-size: 1rem;
     line-height: normal;
   }
 }
-
 .copy-email {
   text-transform: unset;
 }

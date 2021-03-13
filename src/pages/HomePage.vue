@@ -131,8 +131,6 @@ export default {
 
     a {
       position: relative;
-      z-index: 1;
-
       @media screen and (max-width: 48rem) {
         font-size: 0.75rem;
         letter-spacing: 0.03em;
